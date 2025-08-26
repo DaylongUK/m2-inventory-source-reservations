@@ -81,8 +81,8 @@ class AlwaysAutoReturnToStockInvoice extends ReturnToStockInvoice
         $isOnline = false,
         $notify = false,
         $appendComment = false,
-        CreditmemoCommentCreationInterface $comment = null,
-        CreditmemoCreationArgumentsInterface $arguments = null
+        ?CreditmemoCommentCreationInterface $comment = null,
+        ?CreditmemoCreationArgumentsInterface $arguments = null
     ): int {
         $invoice = $this->invoiceRepository->get($invoiceId);
         $order = $this->orderRepository->get($invoice->getOrderId());

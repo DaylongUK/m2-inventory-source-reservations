@@ -71,8 +71,8 @@ class AlwaysAutoReturnToStockOrder extends ReturnToStockOrder
         array $items = [],
         $notify = false,
         $appendComment = false,
-        CreditmemoCommentCreationInterface $comment = null,
-        CreditmemoCreationArgumentsInterface $arguments = null
+        ?CreditmemoCommentCreationInterface $comment = null,
+        ?CreditmemoCreationArgumentsInterface $arguments = null
     ): int {
         $order = $this->orderRepository->get($orderId);
 
